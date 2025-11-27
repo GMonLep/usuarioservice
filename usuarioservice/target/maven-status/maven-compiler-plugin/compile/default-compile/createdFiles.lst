@@ -1,0 +1,8 @@
+com\perfulandia\usuarioservice\config\OpenApiConfig$1.class
+com\perfulandia\usuarioservice\model\Usuario$UsuarioBuilder.class
+com\perfulandia\usuarioservice\model\Usuario.class
+com\perfulandia\usuarioservice\service\UsuarioService.class
+com\perfulandia\usuarioservice\config\OpenApiConfig.class
+com\perfulandia\usuarioservice\UsuarioserviceApplication.class
+com\perfulandia\usuarioservice\controller\UsuarioController.class
+com\perfulandia\usuarioservice\repository\UsuarioRepository.class
