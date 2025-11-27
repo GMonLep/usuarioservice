@@ -58,6 +58,9 @@ public class UsuarioService {
                         case "rol":
                             usuario.setRol((String) valor);
                             break;
+                        case "contrasenia":
+                            usuario.setContrasenia((String) valor);
+                            break;
                     }
                 }
         );

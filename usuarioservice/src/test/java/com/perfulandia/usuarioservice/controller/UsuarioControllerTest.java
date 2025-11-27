@@ -53,7 +53,7 @@ public class UsuarioControllerTest {
     @Test
     @DisplayName("TEST 1: GET LISTA")
     void testGetAll() throws Exception{
-        when(service.listar()).thenReturn(List.of(new Usuario(1L, "Juanito","juanit@gmail.com","Administrador")));
+        when(service.listar()).thenReturn(List.of(new Usuario(1L, "Juanito","juanit@gmail.com","Administrador", "9g3n")));
         mockMvc.perform(get("/api/usuarios"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$[0].nombre").value("Juanito"));
@@ -62,7 +62,7 @@ public class UsuarioControllerTest {
     @Test
     @DisplayName("TEST 2 GET ID")
     void getById() throws Exception{
-        Usuario user = new Usuario(1L, "Juanito","juanit@gmail.com","Administrador");
+        Usuario user = new Usuario(1L, "Juanito","juanit@gmail.com","Administrador", "9g3n");
         when(service.buscar(1L)).thenReturn(user);
         mockMvc.perform(get("/api/usuarios/1"))
                 .andExpect(status().isOk())
@@ -72,7 +72,7 @@ public class UsuarioControllerTest {
     @Test
     @DisplayName("TEST 3: POST")
     void testPost() throws Exception{
-        Usuario user = new Usuario(1L, "Juanito","juanit@gmail.com","Administrador");
+        Usuario user = new Usuario(1L, "Juanito","juanit@gmail.com","Administrador", "9g3n");
         when(service.guardar(any())).thenReturn(user);
 
         mockMvc.perform(post("/api/usuarios")
@@ -85,7 +85,7 @@ public class UsuarioControllerTest {
     @Test
     @DisplayName("TESTING 4 PATCH")
     void testPatch() throws Exception{
-        Usuario actualizado = new Usuario(1L, "Pedro", "pedro@gmail.com", "Administrador");
+        Usuario actualizado = new Usuario(1L, "Pedro", "pedro@gmail.com", "Administrador", "9g3n");
         Map<String,Object> campos = new HashMap<>();
         campos.put("nombre", "Pedro");
         campos.put("correo", "pedro@gmail.com");

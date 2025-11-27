@@ -23,4 +23,7 @@ public class Usuario {
 
     @Schema (description = "Rol del usuario", example = "Administrador")
     private String rol; // ADMIN, GERENTE, Usuario
+
+    @Schema (description = "Rol del usuario", example = "Administrador")
+    private String contrasenia; // ADMIN, GERENTE, Usuario
 }
